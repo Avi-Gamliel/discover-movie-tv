@@ -1,0 +1,163 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+/* @media (orientation: landscape){ */
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 1px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+  }
+  
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html,body{
+  min-height: 100vh !important;
+  max-height: 100vh !important;
+  width:100vw;
+  position: fixed;
+  overflow: hidden;
+  margin: 0; 
+}
+body > #root > .App > .mainContainer > .Container > .scrollContainer{
+  width: 100vw;
+  height: 90%;
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch;
+}
+body > #root > .App > .mainContainer > .Container > .scrollContainerFind{
+  width: 100vw;
+ height: 90%;
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch;
+}
+.poster_img{
+  transition: 250ms all;
+}
+
+
+.loading{
+  background: url('./img/compress-loader-2.gif');
+background-repeat: no-repeat;
+background-size: 100% 100% ;
+outline:'none';
+overflow: 'hidden'
+}
+.scrol{
+  overflow-x :hidden !important ;
+  overflow-y: scroll !important;
+  scroll-behavior: smooth;
+  bottom: 0px !important;
+  max-height: auto !important;
+  max-width: 100% !important;
+}
+#scroll{
+  overflow-y: scroll !important;
+}
+.noScroll{
+  overflow-y: hidden !important;
+}
+#movies-container, #movies-container-geners {
+  position: relative;
+min-height:100%;
+  width: 100%;
+  overflow-y: scroll !important;
+}
+
+#boxdata{
+  top:66px;
+  z-index: 10000 !important;
+  position: absolute;
+  width: 100%;
+  max-height: 90%;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth !important;
+}
+
+section{ 
+  position: relative;;
+  display: flex !important;
+  width: 100% !important; 
+  overflow-x: scroll!important ;
+  z-index: 10000;
+  height: auto !important;
+  flex-wrap: nowrap;
+  transition: 250ms all;
+  background: black;
+}
+.poster_img:hover{
+  margin-left:  0 40px;
+  transform:  scale(1.2);
+}
+.sticky{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top:0;
+  z-index: 1005;
+}
+.stickyFind{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top:0;
+}
+
+.gradient{
+  
+  background:  linear-gradient( to  left , black, #191919) !important
+
+}
+input::placeholder{
+  color:white;
+text-align: center;
+}
+
+.menu_tab:hover{
+  background :black !important;
+}
+
